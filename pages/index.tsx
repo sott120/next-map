@@ -1,5 +1,10 @@
-import React from "react";
+import Header from "@/components/common/Header";
+import { Fragment } from "react";
 
 export default function Home() {
-  return <>index</>;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
