@@ -3,10 +3,12 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-interface Props {}
+interface IHeaderComponent {
+  rightElements?: React.ReactNode[];
+}
 const logo = '/logo.png';
 
-export default function HeaderComponent({}: Props) {
+export default function HeaderComponent({ rightElements }: IHeaderComponent) {
   return (
     <S.Header>
       <div className="header">
@@ -15,7 +17,7 @@ export default function HeaderComponent({}: Props) {
             <Image className="header__logo--image" src={logo} fill sizes="100" alt="헤더로고" priority={true} />
           </div>
         </Link>
-        <div className="header__icons">아이콘 영역</div>
+        {rightElements && <div className="header__icons">{rightElements}</div>}
       </div>
     </S.Header>
   );
