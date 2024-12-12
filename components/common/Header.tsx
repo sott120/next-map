@@ -25,8 +25,8 @@ export default function HeaderComponent({ rightElements }: IHeaderComponent) {
 
 const S = {
   Header: styled.header`
-    background-color: #d7d7d7;
-
+    box-shadow: #00000011 -2px 3px 9px 2px;
+    padding: 5px 30px;
     .header {
       display: flex;
       justify-content: space-between;
@@ -36,8 +36,8 @@ const S = {
       &__logo {
         display: block;
         position: relative;
-        width: 100px;
-        height: 50px;
+        width: 80px;
+        height: 40px;
         pointer-events: auto;
         &--image {
           position: relative;
