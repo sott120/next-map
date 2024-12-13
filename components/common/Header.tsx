@@ -25,8 +25,10 @@ export default function HeaderComponent({ rightElements }: IHeaderComponent) {
 
 const S = {
   Header: styled.header`
-    box-shadow: #00000011 -2px 3px 9px 2px;
-    padding: 5px 30px;
+    position: absolute;
+    width: 100%;
+    /* box-shadow: #00000011 -2px 3px 9px 2px; */
+    padding: 5px 0px;
     .header {
       display: flex;
       justify-content: space-between;
