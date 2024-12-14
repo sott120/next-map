@@ -1,4 +1,5 @@
 import Header from '@/components/common/Header';
+import MapSection from '@/components/home/MapSection';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { AiOutlineShareAlt } from 'react-icons/ai';
@@ -23,7 +24,9 @@ export default function Home() {
           </S.FeedbackLink>,
         ]}
       />
-      <S.Main>apdlf</S.Main>
+      <S.Main>
+        <MapSection />
+      </S.Main>
     </Fragment>
   );
 }

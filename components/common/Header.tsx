@@ -11,14 +11,12 @@ const logo = '/logo.png';
 export default function HeaderComponent({ rightElements }: IHeaderComponent) {
   return (
     <S.Header>
-      <div className="header">
-        <Link href="/">
-          <div className="header__logo">
-            <Image className="header__logo--image" src={logo} fill sizes="100" alt="헤더로고" priority={true} />
-          </div>
-        </Link>
-        {rightElements && <div className="header__icons">{rightElements}</div>}
-      </div>
+      <Link href="/">
+        <div className="header__logo">
+          <Image className="header__logo--image" src={logo} fill sizes="100" alt="헤더로고" priority={true} />
+        </div>
+      </Link>
+      {rightElements && <div className="header__icons">{rightElements}</div>}
     </S.Header>
   );
 }
@@ -26,15 +24,18 @@ export default function HeaderComponent({ rightElements }: IHeaderComponent) {
 const S = {
   Header: styled.header`
     position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    z-index: 100;
+    pointer-events: none;
     /* box-shadow: #00000011 -2px 3px 9px 2px; */
-    padding: 5px 0px;
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      pointer-events: none;
       &__logo {
         display: block;
         position: relative;
