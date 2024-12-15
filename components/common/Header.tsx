@@ -30,7 +30,7 @@ const S = {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px 10px;
+    padding: 8px 10px;
     box-sizing: border-box;
     z-index: 100;
     pointer-events: none;
